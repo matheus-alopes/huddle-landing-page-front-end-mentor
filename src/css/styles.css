@@ -1,0 +1,106 @@
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+body {
+    padding: 1rem 2rem;
+    min-height: 100vh;
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "header ."
+                         "layout-img layout-text"
+                         ". footer";
+    grid-template-columns: 55% 40%;
+    /* grid-column-gap: 2rem; */
+}
+
+header {
+    grid-area: header;
+}
+
+header .logo {
+    width: 6rem;
+}
+
+.layout-img-area {
+    padding: 2rem;
+    grid-area: layout-img;
+}
+
+.layout-img-area .layout-img {
+    width: 100%;
+}
+
+.layout-text-area {
+    grid-area: layout-text;
+    padding-top: 3rem;
+}
+
+.layout-text-area .main-text {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.layout-text-area .text {
+    text-align: justify;
+    font-size: 0.5rem;
+}
+
+.layout-text-area .register-button {
+    font-size: 0.5rem;
+    margin-top: 1rem;
+    color: hsl(257, 40%, 49%);
+    padding: 0.5rem 2rem;
+    border: 0;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.layout-text-area .register-button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: #ffffff;
+    transition: 0.5s ease-in-out;
+}
+
+footer {
+    grid-area: footer;
+    text-align: end;
+}
+
+footer a > svg {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.2rem;
+    border-radius: 50%;
+    border: solid 0.1rem white;
+    padding: 0.5rem;
+} 
+
+footer a > svg:hover {
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+    transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 580px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layout-text-area, footer {
+        text-align: center;
+        padding: 0;
+    }
+}
