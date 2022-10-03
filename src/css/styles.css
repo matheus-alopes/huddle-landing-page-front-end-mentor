@@ -1,5 +1,5 @@
 html {
-    font-size: 16px;
+    font-size: 32px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: #ffffff;
@@ -20,7 +20,6 @@ main {
                          "layout-img layout-text"
                          ". footer";
     grid-template-columns: 55% 40%;
-    /* grid-column-gap: 2rem; */
 }
 
 header {
@@ -93,7 +92,21 @@ footer a > svg:hover {
     transition: 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 580px) {
+
+
+@media screen and (max-width: 1250px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 850px) {
     main {
         display: flex;
         flex-direction: column;
@@ -102,5 +115,9 @@ footer a > svg:hover {
     .layout-text-area, footer {
         text-align: center;
         padding: 0;
+    }
+
+    footer {
+        margin-top: 2rem;
     }
 }
