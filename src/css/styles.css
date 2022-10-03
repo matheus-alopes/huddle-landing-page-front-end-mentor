@@ -8,7 +8,7 @@ html {
 body {
     padding: 1rem 2rem;
     min-height: 100vh;
-    background-color: hsl(257, 40%, 49%);
+    background-color: var(--main-color);
     background-image: url(../images/bg-desktop.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@ main {
     grid-template-areas: "header ."
                          "layout-img layout-text"
                          ". footer";
-    grid-template-columns: 55% 40%;
+    grid-template-columns: 55% 45%;
 }
 
 header {
@@ -58,7 +58,7 @@ header .logo {
 .layout-text-area .register-button {
     font-size: 0.5rem;
     margin-top: 1rem;
-    color: hsl(257, 40%, 49%);
+    color: var(--main-color);
     padding: 0.5rem 2rem;
     border: 0;
     border-radius: 2rem;
@@ -67,7 +67,7 @@ header .logo {
 }
 
 .layout-text-area .register-button:hover {
-    background-color: hsl(300, 69%, 71%);
+    background-color: var(--hover-color);
     color: #ffffff;
     transition: 0.5s ease-in-out;
 }
@@ -87,8 +87,8 @@ footer a > svg {
 } 
 
 footer a > svg:hover {
-    color: hsl(300, 69%, 71%);
-    border-color: hsl(300, 69%, 71%);
+    color: var(--hover-color);
+    border-color: var(--hover-color);
     transition: 0.5s ease-in-out;
 }
 
