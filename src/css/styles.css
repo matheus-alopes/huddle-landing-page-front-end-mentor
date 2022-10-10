@@ -1,12 +1,12 @@
 html {
-    font-size: 32px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: #ffffff;
 }
 
 body {
-    padding: 1rem 2rem;
+    padding: 2rem 4rem;
     min-height: 100vh;
     background-color: var(--main-color);
     background-image: url(../images/bg-desktop.svg);
@@ -15,6 +15,7 @@ body {
 }
 
 main {
+    max-width: 90rem;
     display: grid;
     grid-template-areas: "header ."
                          "layout-img layout-text"
@@ -27,11 +28,11 @@ header {
 }
 
 header .logo {
-    width: 6rem;
+    width: 12rem;
 }
 
 .layout-img-area {
-    padding: 2rem;
+    padding: 4rem;
     grid-area: layout-img;
 }
 
@@ -41,27 +42,27 @@ header .logo {
 
 .layout-text-area {
     grid-area: layout-text;
-    padding-top: 3rem;
+    padding-top: 6rem;
 }
 
 .layout-text-area .main-text {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     text-transform: capitalize;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .layout-text-area .text {
     text-align: justify;
-    font-size: 0.5rem;
+    font-size: 1rem;
 }
 
 .layout-text-area .register-button {
-    font-size: 0.5rem;
-    margin-top: 1rem;
+    font-size: 1rem;
+    margin-top: 2rem;
     color: var(--main-color);
-    padding: 0.5rem 2rem;
+    padding: 1rem 4rem;
     border: 0;
-    border-radius: 2rem;
+    border-radius: 4rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
 }
@@ -78,9 +79,8 @@ footer {
 }
 
 footer a > svg {
-    width: 1rem;
-    height: 1rem;
-    margin: 0.2rem;
+    transform: scale(1.5); 
+    margin: 1rem;
     border-radius: 50%;
     border: solid 0.1rem white;
     padding: 0.5rem;
@@ -92,17 +92,15 @@ footer a > svg:hover {
     transition: 0.5s ease-in-out;
 }
 
-
-
 @media screen and (max-width: 1250px) {
     html {
-        font-size: 28px;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 1050px) {
     html {
-        font-size: 24px;
+        font-size: 12px;
     }
 }
 
@@ -112,12 +110,18 @@ footer a > svg:hover {
         flex-direction: column;
     }
 
-    .layout-text-area, footer {
+    .layout-text-area, .layout-text-area .text, footer {
         text-align: center;
         padding: 0;
     }
 
     footer {
-        margin-top: 1.5rem;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .layout-text-area .main-text {
+        font-size: 2rem;
     }
 }
